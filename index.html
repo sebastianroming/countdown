@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2018 Sebastian Roming
+-->
+<html>
+    <head>
+        <title>Countdown bis zum Jubil&auml;m</title>
+        <meta charset='utf-8'>
+        <script src='index.js'></script>
+        <script>
+            Countdown.start('2018-06-01 17:00:00', 'countdown');
+        </script>
+        <style>
+            html, body {
+                margin:0;
+                padding:0;
+                font-family:Arial, Helvetica, sans-serif;
+                height: 100%;
+            }
+
+            #main {
+                height: 50%;
+                width: 100%;
+                display: table;
+            }
+
+            #logo {
+                background-image:url(logo.png);
+                background-repeat:no-repeat;
+                background-position:center top;
+                width:100%;
+                height:50%;
+                margin:0 auto;
+            }
+
+            #wrapper {
+                margin:10px auto;
+                text-align:center;
+                display: table-cell;
+                height: 100%;
+                vertical-align: middle;
+                font-size:72px;
+                font-weight:bold;
+            }
+
+            #note {
+                font-size:66px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='logo'></div>
+        <div id='main'>
+            <div id='wrapper'>
+                <span id='countdown'></span>
+                <div id='note'>bis zum 150-jährigen Jubiläum</div>
+            </div>
+        </div>
+
+    </body>
+</html>
