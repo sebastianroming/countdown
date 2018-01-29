@@ -19,8 +19,12 @@ Countdown = function() {
             var _hrsToEvent     = Math.floor((_timeUntilEvent % (1000 * 60 * 60 *24)) / (1000 * 60 * 60));
             var _minsToEvent    = Math.floor((_timeUntilEvent % (1000 * 60 * 60)) / (1000 * 60));
             var _secsToEvent    = Math.floor((_timeUntilEvent % (1000 * 60)) / 1000);
+            var _daysText       = (_daysToEvent == 1) ? 'Tag' : 'Tage';
+            var _hrsText        = (_hrsToEvent == 1) ? 'Stunde' : 'Stunden';
+            var _minsText       = (_minsToEvent == 1) ? 'Minute' : 'Minuten';
+            var _secsText       = (_secsToEvent == 1) ? 'Sekunde' : 'Sekunden';
 
-            document.getElementById(that.countdownElement).innerHTML = _daysToEvent + ' Tage, ' + _hrsToEvent + ' Stunden, ' + _minsToEvent + ' Minuten, ' + _secsToEvent + ' Sekunden';
+            document.getElementById(that.countdownElement).innerHTML = _daysToEvent + ' ' + _daysText + ', ' + _hrsToEvent + ' ' + _hrsText + ', ' + _minsToEvent + ' ' + _minsText + ', ' + _secsToEvent + ' ' + _secsText;
 
         }, 1000);
 
