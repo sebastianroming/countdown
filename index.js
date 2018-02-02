@@ -24,7 +24,11 @@ Countdown = function() {
             var _minsText       = (_minsToEvent == 1) ? 'Minute' : 'Minuten';
             var _secsText       = (_secsToEvent == 1) ? 'Sekunde' : 'Sekunden';
 
-            document.getElementById(that.countdownElement).innerHTML = _daysToEvent + ' ' + _daysText + ', ' + _hrsToEvent + ' ' + _hrsText + ', ' + _minsToEvent + ' ' + _minsText + ', ' + _secsToEvent + ' ' + _secsText;
+            var _hrsOutput = (_hrsToEvent.toString().length == 1) ? '0' + _hrsToEvent : _hrsToEvent;
+            var _minsOutput = (_minsToEvent.toString().length == 1) ? '0' + _minsToEvent : _minsToEvent;
+            var _secsOutput = (_secsToEvent.toString().length == 1) ? '0' + _secsToEvent : _secsToEvent;
+
+            document.getElementById(that.countdownElement).innerHTML = _daysToEvent + ' ' + _daysText + '<br />' + _hrsOutput + ':' + _minsOutput + ':' + _secsOutput;
 
         }, 1000);
 
